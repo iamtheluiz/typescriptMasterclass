@@ -1,13 +1,12 @@
 // Modules
 import express from 'express';
+import routes from './routes';
 
 // Define application
 const app = express();
 
-// Main route
-app.get('/', (req, res) => {
-  return res.send('Hello World!');
-});
+// Import application routes
+app.use(routes);
 
 // Start application
 app.listen(3333);
